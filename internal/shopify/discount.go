@@ -117,9 +117,10 @@ func (d *discountServiceImpl) Create(
 			}
 		}
 	`
-	endsAtField := ""
+
+	endsAtField := "endsAt: null"
 	if discount.EndsAt != "" {
-		endsAtField = fmt.Sprintf(`endsAt: "%s",`, discount.EndsAt)
+		endsAtField = fmt.Sprintf(`endsAt: "%s"`, discount.EndsAt)
 	}
 
 	gql = fmt.Sprintf(
@@ -192,7 +193,7 @@ func (d *discountServiceImpl) Update(
 		}
 	`
 
-	endsAtField := ""
+	endsAtField := "endsAt: null"
 	if discount.EndsAt != "" {
 		endsAtField = fmt.Sprintf(`endsAt: "%s"`, discount.EndsAt)
 	}
