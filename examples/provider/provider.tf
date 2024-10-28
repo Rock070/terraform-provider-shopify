@@ -2,7 +2,7 @@ terraform {
   required_providers {
     shopify = {
       source  = "pseudomonarchia/terraform-provider-shopify"
-      version = "0.0.4"
+      version = "0.0.6"
     }
   }
 }
